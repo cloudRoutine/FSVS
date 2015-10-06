@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Test replacement fields</Title>
+            <Shortcut>test</Shortcut>
+            <Description>Code snippet for testing replacement fields</Description>
+            <Author>MSIT</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                  <ID>param1</ID>
+                    <ToolTip>First field</ToolTip>
+                    <Default>first</Default>
+                </Literal>
+                <Literal>
+                    <ID>param2</ID>
+                    <ToolTip>Second field</ToolTip>
+                    <Default>second</Default>
+                </Literal>
+            </Declarations>
+            <References>
+               <Reference>
+                   <Assembly>System.Windows.Forms.dll</Assembly>
+               </Reference>
+            </References>
+            <Code Language="TestSnippets">
+                <![CDATA[MessageBox.Show("$param1$");
+     MessageBox.Show("$param2$");]]>
+            </Code>  
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

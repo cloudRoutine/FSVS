@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Plugin.Jared Hester.861f5d78-0c5c-4bc7-9de3-73d16dc8ca69" Version="1.0" Language="en-US" Publisher="Jared Hester" />
+    <DisplayName>Plugin</DisplayName>
+    <Description>VS Extension only F#</Description>
+    <Tags>fsharp, f#</Tags>
+  </Metadata>
+  <Installation InstalledByMsi="false" AllUsers="false" SystemComponent="false" Scope="ProductExtension">
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency d:Source="Installed" Id="FSharp.Editor" DisplayName="Microsoft Visual FSharp Editor Extensions" Version="[12.0,15.0)" d:InstallSource="Download" Location="http://www.microsoft.com/en-us/download/details.aspx?id=48179" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="YaccTag" Path="|YaccTag|" />
+  </Assets>
+</PackageManifest>

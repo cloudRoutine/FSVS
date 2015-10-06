@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SnippetCollection>
+    <Language Lang="TestSnippets" Guid="{6B3BBD66-91B9-4039-9FCD-15FB46D25F9F}">
+        <SnippetDir>
+            <OnOff>On</OnOff>
+            <Installed>true</Installed>
+            <Locale>1033</Locale>
+            <DirPath>"C:\Users\Jared\Programming Projects\FsSnippets\TestSnippets\Snippets\%LCID%\"</DirPath>
+            <LocalizedName>Snippets</LocalizedName>
+        </SnippetDir>
+    </Language>
+</SnippetCollection>
