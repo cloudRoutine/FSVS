@@ -113,10 +113,10 @@ type HighlightWordTagger
         let point = caretPosition.Point.GetPoint(self.SourceBuffer, caretPosition.Affinity ) 
 
         if not point.HasValue then ()
-        elif    self.CurrentWord.HasValue
-            &&  self.CurrentWord.Value.Snapshot = self.View.TextSnapshot
-            &&  point.Value.Difference (self.CurrentWord.Value.Start) >= 0
-            &&  point.Value.Difference (self.CurrentWord.Value.End) <= 0 then ()
+        elif self.CurrentWord.HasValue
+         &&  self.CurrentWord.Value.Snapshot = self.View.TextSnapshot
+         &&  point.Value.Difference (self.CurrentWord.Value.Start) >= 0
+         &&  point.Value.Difference (self.CurrentWord.Value.End) <= 0 then ()
         else
             self.RequestedPoint <- point.Value
 
@@ -150,8 +150,8 @@ type HighlightWordTagger
 [<ContentType "text">]
 [<TagType (typeof<TextMarkerTag>)>]
 type HighlightWordTaggerProvider [<ImportingConstructor>] 
-    ( [<Import>] textSearchService : ITextSearchService
-    , [<Import>] textStructureNavigatorSelector : ITextStructureNavigatorSelectorService) as self =
+    ( textSearchService : ITextSearchService
+    , textStructureNavigatorSelector : ITextStructureNavigatorSelectorService) as self =
     let mutable textSearchService              = textSearchService 
     let mutable textStructureNavigatorSelector = textStructureNavigatorSelector 
     
